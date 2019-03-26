@@ -85,35 +85,6 @@ public class Checker {
             }
             return false;
         });
-        /*final Map<Symbol, List<Node>> automatonTransitions = fromAutomaton.delta.getOrDefault(q.first, ConstantructLoop(q.first));
-        final Map<Symbol, List<Node>> ltlTransitions = fromLtl.delta.getOrDefault(q.second, ConstantructLoop(q.second));
-        for (Symbol autoTransitionLabel : automatonTransitions.keySet()) {
-            for (Symbol ltlTransitionLabel : ltlTransitions.keySet()) {
-                if (autoTransitionLabel.expressionsetOf(ltlTransitionLabel)) {
-                    final List<Node> autoNodes = automatonTransitions.getOrDefault(autoTransitionLabel, Collections.emptyList());
-                    final List<Node> ltlNodes = ltlTransitions.getOrDefault(ltlTransitionLabel, Collections.emptyList());
-                    for (Node autoNode : autoNodes) {
-                        for (Node ltlNode : ltlNodes) {
-                            final Pair to = new Pair(autoNode, ltlNode);
-                            if (path1.contains(to)) {
-                                foundPath = true;
-                                path = new ArrayList<>();
-                                path.addAll(transitions1);
-                                path.addAll(transitions2);
-                                path.add(autoTransitionLabel);
-                                cycleStart = path1.indexOf(to);
-                                return;
-                            }
-                            if (!visited2.contains(to)) {
-                                transitions2.add(autoTransitionLabel);
-                                innerDFS(to);
-                                transitions2.remove(transitions2.size() - 1);
-                            }
-                        }
-                    }
-                }
-            }
-        }*/
     }
 
     private void commonDFS(final Pair q, BiFunction<Pair, Symbol, Boolean> body) {
