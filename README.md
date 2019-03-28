@@ -4,7 +4,7 @@
 
 Download distribution from releases -- https://github.com/EvgeniyaKatunina/LTL-Verifier/releases/tag/1.0 .
 ```
-Usage: .\LTLVerifier <path to XML file containing automation> <ltl formula>
+Usage: .\LTLVerifier <path to XML file with automaton> <LTL expression>
 ```
 ## Output Example
 ```
